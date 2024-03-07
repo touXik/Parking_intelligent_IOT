@@ -1,0 +1,1430 @@
+[
+    {
+        "id": "16392dc125d01103",
+        "type": "tab",
+        "label": "Parking_intelligent",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a482424b8e131f70",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c1c8adc896d66f07",
+        "type": "ui_group",
+        "name": "test",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37fe4db338af283a",
+        "type": "ui_group",
+        "name": "form",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c4d663aba8fd9f8",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "parking",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "686619cbde18b8b6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "018cca7d8456f2f1",
+        "type": "ui_group",
+        "name": "nbr",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d000e6550deadf89",
+        "type": "mysql2-server",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "username": "root",
+        "password": "",
+        "db": "parking",
+        "servername": ""
+    },
+    {
+        "id": "6049901b38ebc22b",
+        "type": "MySQL-Server-Connector",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "user": "root",
+        "password": " ",
+        "tls": true,
+        "database": "parking"
+    },
+    {
+        "id": "84310691900ae085",
+        "type": "mysql2-server",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "username": "root",
+        "password": "",
+        "db": "parking",
+        "servername": ""
+    },
+    {
+        "id": "73167ef195f213f4",
+        "type": "ui_spacer",
+        "z": "16392dc125d01103",
+        "name": "spacer",
+        "group": "5bcf2089fc7a74d3",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "896a1c4049143c5a",
+        "type": "ui_spacer",
+        "z": "16392dc125d01103",
+        "name": "spacer",
+        "group": "658640496137e470",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "fe97f808c2da70eb",
+        "type": "ui_spacer",
+        "z": "16392dc125d01103",
+        "name": "spacer",
+        "group": "658640496137e470",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "86675dd00d168abd",
+        "type": "ui_group",
+        "name": "Floor A",
+        "tab": "94286be632715987",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e135a497b53b4d2",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "parking_lot",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "fa7da0ae0e9e1b52",
+        "type": "ui_group",
+        "name": "Floor B",
+        "tab": "94286be632715987",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "658640496137e470",
+        "type": "ui_group",
+        "name": "MQTT Simulator",
+        "tab": "94286be632715987",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "85b8400e3a38c2c6",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "Entree",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5bcf2089fc7a74d3",
+        "type": "ui_group",
+        "name": "Parking Lot",
+        "tab": "94286be632715987",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "94286be632715987",
+        "type": "ui_tab",
+        "name": "SmarParking",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "77a10de26279077d",
+        "type": "ui_gauge",
+        "z": "16392dc125d01103",
+        "name": "Occupancy A",
+        "group": "86675dd00d168abd",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "gage",
+        "title": " Occupancy",
+        "label": "cars",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1330,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "17cab87698045f3e",
+        "type": "mysql",
+        "z": "16392dc125d01103",
+        "mydb": "9e135a497b53b4d2",
+        "name": "Spots",
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "9082ca9c89e52851",
+                "1886b33ef01e42a3"
+            ]
+        ]
+    },
+    {
+        "id": "312eb9d11aab9976",
+        "type": "ui_gauge",
+        "z": "16392dc125d01103",
+        "name": "Occupancy B",
+        "group": "fa7da0ae0e9e1b52",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "gage",
+        "title": " Occupancy",
+        "label": "cars",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1330,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a83d8892a2a79ae3",
+        "type": "ui_button",
+        "z": "16392dc125d01103",
+        "name": "Confirm  Entree spot",
+        "group": "658640496137e470",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Confirm  Entree spot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "spotinput_Entree",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "02fbe74e8cc19661"
+            ]
+        ]
+    },
+    {
+        "id": "171f885f7ad1125e",
+        "type": "ui_button",
+        "z": "16392dc125d01103",
+        "name": "Confirm Leave spot",
+        "group": "658640496137e470",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Confirm Leave spot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "spotinput_Leave",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "bb55415c330fed21"
+            ]
+        ]
+    },
+    {
+        "id": "02fbe74e8cc19661",
+        "type": "mqtt out",
+        "z": "16392dc125d01103",
+        "name": "Entree",
+        "topic": "Entree",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "85b8400e3a38c2c6",
+        "x": 270,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "764b46b5e5a1e52d",
+        "type": "mqtt in",
+        "z": "16392dc125d01103",
+        "name": "Entree receiver",
+        "topic": "Entree",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "85b8400e3a38c2c6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 220,
+        "wires": [
+            [
+                "0326d97ce41623cd"
+            ]
+        ]
+    },
+    {
+        "id": "bb55415c330fed21",
+        "type": "mqtt out",
+        "z": "16392dc125d01103",
+        "name": "Leave",
+        "topic": "Leave",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "85b8400e3a38c2c6",
+        "x": 270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9243c9ac1d9f9213",
+        "type": "mqtt in",
+        "z": "16392dc125d01103",
+        "name": "Leave receiver",
+        "topic": "Leave",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "85b8400e3a38c2c6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 300,
+        "wires": [
+            [
+                "4e6718a4ffa056fd"
+            ]
+        ]
+    },
+    {
+        "id": "d7d550361f70842f",
+        "type": "debug",
+        "z": "16392dc125d01103",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "51438e0f2c124b8f",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "SetAvailability",
+        "func": "var level=\"\";\n\nif (msg.payload[0].occupancy / msg.payload[0].capacity== 1 \n    && msg.payload[1].occupancy / msg.payload[1].capacity == 1)\n{level=\"full\";\n    msg.payload = level;\n    return msg; }\n\nif (msg.payload[0].occupancy / msg.payload[0].capacity <= 0.7\n    || (msg.payload[1].occupancy / msg.payload[1].capacity > 0.7 && msg.payload[0].occupancy / msg.payload[0].capacity < 1))\n{ level = msg.payload[0].floor_id;\n    msg.payload = level;\n    return msg; }\n\nif (msg.payload[0].occupancy / msg.payload[0].capacity == 1\n    && msg.payload[1].occupancy / msg.payload[1].capacity > 0.7) {\n    level = msg.payload[1].floor_id;\n    msg.payload = level;\n    return msg;\n}\n\n\nif (msg.payload[1].occupancy / msg.payload[1].capacity <= 0.7\n    || msg.payload[0].occupancy / msg.payload[0].capacity > 0.7) \n    { level = msg.payload[1].floor_id; \n    msg.payload = level;\n    return msg; }\n    \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 260,
+        "wires": [
+            [
+                "ed02ff260ae1ee16",
+                "5fd7743cfa99084e",
+                "096da98dc465083e"
+            ]
+        ]
+    },
+    {
+        "id": "4b9fc0f97ee18dee",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Select Foors",
+        "func": "msg.topic = \"SELECT * FROM floors\" ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 40,
+        "wires": [
+            [
+                "c4eede3b51a69673"
+            ]
+        ]
+    },
+    {
+        "id": "ed02ff260ae1ee16",
+        "type": "debug",
+        "z": "16392dc125d01103",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2daf2763c17f6163",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Occupancy A",
+        "func": "msg.payload=msg.payload[0].occupancy;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 540,
+        "wires": [
+            [
+                "77a10de26279077d"
+            ]
+        ]
+    },
+    {
+        "id": "58bfb832276b1fd4",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Occupancy B",
+        "func": "msg.payload=msg.payload[1].occupancy;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 440,
+        "wires": [
+            [
+                "312eb9d11aab9976"
+            ]
+        ]
+    },
+    {
+        "id": "56fdc366219d596d",
+        "type": "inject",
+        "z": "16392dc125d01103",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 720,
+        "wires": [
+            [
+                "d337516372e3a896"
+            ]
+        ]
+    },
+    {
+        "id": "9082ca9c89e52851",
+        "type": "debug",
+        "z": "16392dc125d01103",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3d2b2fcd94b49adf",
+        "type": "change",
+        "z": "16392dc125d01103",
+        "name": "msg.payload  to msg.options",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "options",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 680,
+        "wires": [
+            [
+                "1d3592a17e683ff1",
+                "2f54bc99c5dd6268",
+                "fbfbb96a543fdfc7"
+            ]
+        ]
+    },
+    {
+        "id": "1886b33ef01e42a3",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Transform payload",
+        "func": "var sb = \"[\";\nvar jsonData = msg.payload;\n//msg.payload = JSON.parse(json);\n\n\n\nfor (var i = 0; i < jsonData.length; i++) {\n    var counter = jsonData[i];\n    //console.log(counter.spot_id);\n   sb= sb.concat(\"\\\"\" + counter.spot_id+\"\\\",\");\n}\n\nmsg.payload = JSON.parse(sb+\"\\\"\\\"]\");\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 780,
+        "wires": [
+            [
+                "777076ab1bf25d96",
+                "3d2b2fcd94b49adf"
+            ]
+        ]
+    },
+    {
+        "id": "1d3592a17e683ff1",
+        "type": "debug",
+        "z": "16392dc125d01103",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "777076ab1bf25d96",
+        "type": "debug",
+        "z": "16392dc125d01103",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "2f54bc99c5dd6268",
+        "type": "ui_dropdown",
+        "z": "16392dc125d01103",
+        "name": "",
+        "label": "Spot_Entree",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "658640496137e470",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "SPOT",
+                "value": "a-1",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1090,
+        "y": 780,
+        "wires": [
+            [
+                "06ec4fcc308dc9c6"
+            ]
+        ]
+    },
+    {
+        "id": "d337516372e3a896",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Get available spots",
+        "func": "var floor = flow.get(\"availble_floor\");\nmsg.topic = \"SELECT spot_id  FROM spots WHERE status = 0 and floor_id='\"+floor+\"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 800,
+        "wires": [
+            [
+                "17cab87698045f3e"
+            ]
+        ]
+    },
+    {
+        "id": "5fd7743cfa99084e",
+        "type": "ui_text_input",
+        "z": "16392dc125d01103",
+        "name": "availble_floor",
+        "label": "Availble floor",
+        "tooltip": "",
+        "group": "5bcf2089fc7a74d3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1130,
+        "y": 260,
+        "wires": [
+            [
+                "62817206ee747628"
+            ]
+        ]
+    },
+    {
+        "id": "62817206ee747628",
+        "type": "change",
+        "z": "16392dc125d01103",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "availble_floor",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06ec4fcc308dc9c6",
+        "type": "change",
+        "z": "16392dc125d01103",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spotinput_Entree",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1310,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0326d97ce41623cd",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Update spot status Entree",
+        "func": "var spot_id = flow.get(\"spotinput_Entree\")\nmsg.topic = \"update spots set status = 1 where spot_id='\"+spot_id+\"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "119b6b1f17813a53"
+            ]
+        ]
+    },
+    {
+        "id": "b9f71bd328669d73",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Update floor occupancy",
+        "func": "//var spot_id = flow.get(\"spotinput\")\nmsg.topic = \"update floors set occupancy = (select count(*) occupancy from spots where status=1 and floor_id = 'A') where floor_id = 'A';update floors set occupancy = (select count(*) occupancy from spots where status=1 and floor_id = 'B') where floor_id = 'B'\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 40,
+        "wires": [
+            [
+                "ce5f058ec8d5400b"
+            ]
+        ]
+    },
+    {
+        "id": "096da98dc465083e",
+        "type": "mqtt out",
+        "z": "16392dc125d01103",
+        "name": "",
+        "topic": "refreshdrop",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "85b8400e3a38c2c6",
+        "x": 1090,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3b9dfdaf518b2305",
+        "type": "mqtt in",
+        "z": "16392dc125d01103",
+        "name": "",
+        "topic": "refreshdrop",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "85b8400e3a38c2c6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 70,
+        "y": 780,
+        "wires": [
+            [
+                "d337516372e3a896",
+                "263d45beb636d190"
+            ]
+        ]
+    },
+    {
+        "id": "4e6718a4ffa056fd",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Update spot status Leave",
+        "func": "var spot_id = flow.get(\"spotinput_Leave\")\nmsg.topic = \"update spots set status = 0 where spot_id='\"+spot_id+\"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "119b6b1f17813a53"
+            ]
+        ]
+    },
+    {
+        "id": "a8d12cbed12ea643",
+        "type": "debug",
+        "z": "16392dc125d01103",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "11c4a5d0f6f54445",
+        "type": "ui_dropdown",
+        "z": "16392dc125d01103",
+        "name": "",
+        "label": "Spot_Leave",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "658640496137e470",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "SPOT",
+                "value": "a-1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1090,
+        "y": 980,
+        "wires": [
+            [
+                "1eed8da4d0927cef"
+            ]
+        ]
+    },
+    {
+        "id": "1eed8da4d0927cef",
+        "type": "change",
+        "z": "16392dc125d01103",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spotinput_Leave",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "263d45beb636d190",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Get occupied spots",
+        "func": "//var floor = flow.get(\"availble_floor\");\nmsg.topic = \"SELECT spot_id  FROM spots WHERE status = 1;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 980,
+        "wires": [
+            [
+                "71e51a62710d7482"
+            ]
+        ]
+    },
+    {
+        "id": "71e51a62710d7482",
+        "type": "mysql",
+        "z": "16392dc125d01103",
+        "mydb": "9e135a497b53b4d2",
+        "name": "Spots",
+        "x": 470,
+        "y": 980,
+        "wires": [
+            [
+                "fd3912482201a52a"
+            ]
+        ]
+    },
+    {
+        "id": "fd3912482201a52a",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Transform payload",
+        "func": "var sb = \"[\";\nvar jsonData = msg.payload;\n//msg.payload = JSON.parse(json);\n\n\n\nfor (var i = 0; i < jsonData.length; i++) {\n    var counter = jsonData[i];\n    //console.log(counter.spot_id);\n   sb= sb.concat(\"\\\"\" + counter.spot_id+\"\\\",\");\n}\n\nmsg.payload = JSON.parse(sb+\"\\\"\\\"]\");\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 980,
+        "wires": [
+            [
+                "d83f5bdf2cd11753"
+            ]
+        ]
+    },
+    {
+        "id": "d83f5bdf2cd11753",
+        "type": "change",
+        "z": "16392dc125d01103",
+        "name": "msg.payload  to msg.options",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "options",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 1080,
+        "wires": [
+            [
+                "11c4a5d0f6f54445"
+            ]
+        ]
+    },
+    {
+        "id": "1792dba56b15ca07",
+        "type": "ui_worldmap",
+        "z": "16392dc125d01103",
+        "group": "5bcf2089fc7a74d3",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "lat": "36.696504",
+        "lon": "4.056365",
+        "zoom": "18",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 400,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "03eab7f5260a013b",
+        "type": "inject",
+        "z": "16392dc125d01103",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "{\"name\":\"Bastos, Tizi Ouzou, Algeria\",\"lat\":36.696504,\"lon\":4.056365}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 1060,
+        "wires": [
+            [
+                "1792dba56b15ca07"
+            ]
+        ]
+    },
+    {
+        "id": "4c29a6a14b3e58ba",
+        "type": "ui_text",
+        "z": "16392dc125d01103",
+        "group": "5bcf2089fc7a74d3",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Location",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 160,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "fbfbb96a543fdfc7",
+        "type": "ui_dropdown",
+        "z": "16392dc125d01103",
+        "name": "",
+        "label": "Reservation spot",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5bcf2089fc7a74d3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "SPOT",
+                "value": "a-1",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1070,
+        "y": 860,
+        "wires": [
+            [
+                "8a7d0396d826afd7"
+            ]
+        ]
+    },
+    {
+        "id": "2b3f252d63c2b8a9",
+        "type": "ui_button",
+        "z": "16392dc125d01103",
+        "name": "Confirm Reservation spot",
+        "group": "5bcf2089fc7a74d3",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Confirm Reservation spot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "spotinput_Entree",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "f02c980646e436d0"
+            ]
+        ]
+    },
+    {
+        "id": "f02c980646e436d0",
+        "type": "mqtt out",
+        "z": "16392dc125d01103",
+        "name": "Entree_Reservation",
+        "topic": "Entree_Reservation",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "85b8400e3a38c2c6",
+        "x": 340,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8a7d0396d826afd7",
+        "type": "change",
+        "z": "16392dc125d01103",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spotinput_Reservation",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1310,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72f8fb948b3f85ad",
+        "type": "function",
+        "z": "16392dc125d01103",
+        "name": "Update spot status Entree",
+        "func": "var spot_id = flow.get(\"spotinput_Reservation\")\nmsg.topic = \"update spots set status = 1 where spot_id='\"+spot_id+\"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "119b6b1f17813a53"
+            ]
+        ]
+    },
+    {
+        "id": "cde0560e2ccf8a81",
+        "type": "mqtt in",
+        "z": "16392dc125d01103",
+        "name": "Entree_Reservation receiver",
+        "topic": "Entree_Reservation",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "85b8400e3a38c2c6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "72f8fb948b3f85ad"
+            ]
+        ]
+    },
+    {
+        "id": "119b6b1f17813a53",
+        "type": "mysql",
+        "z": "16392dc125d01103",
+        "mydb": "9e135a497b53b4d2",
+        "name": "",
+        "x": 570,
+        "y": 40,
+        "wires": [
+            [
+                "b9f71bd328669d73"
+            ]
+        ]
+    },
+    {
+        "id": "ce5f058ec8d5400b",
+        "type": "mysql",
+        "z": "16392dc125d01103",
+        "mydb": "9e135a497b53b4d2",
+        "name": "",
+        "x": 1050,
+        "y": 40,
+        "wires": [
+            [
+                "a8d12cbed12ea643",
+                "4b9fc0f97ee18dee"
+            ]
+        ]
+    },
+    {
+        "id": "c4eede3b51a69673",
+        "type": "mysql",
+        "z": "16392dc125d01103",
+        "mydb": "9e135a497b53b4d2",
+        "name": "",
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "51438e0f2c124b8f",
+                "d7d550361f70842f",
+                "58bfb832276b1fd4",
+                "2daf2763c17f6163"
+            ]
+        ]
+    }
+]
